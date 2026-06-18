@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ciwg70u1ow4tg"]
+
+[ext_resource type="PackedScene" uid="uid://d2hdvpx3qt3sp" path="res://Scenes/player.tscn" id="1_a02cp"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_a02cp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_go701"]
+size = Vector2(1047, 99)
+
+[node name="World" type="Node2D" unique_id=415335754]
+
+[node name="Player" parent="." unique_id=44240927 instance=ExtResource("1_a02cp")]
+position = Vector2(1, 0)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player" unique_id=1315953721]
+remote_path = NodePath("../../Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=553432774]
+position = Vector2(1, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=73330750]
+physics_material_override = SubResource("PhysicsMaterial_a02cp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1261204516]
+position = Vector2(10, 371)
+shape = SubResource("RectangleShape2D_go701")
