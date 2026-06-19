@@ -1,2 +1,6 @@
-res://Scenes/player.tscn
+res://Scenes/Phys Player.tscn
+res://Scripts/phys_player.gd
 res://Scenes/world.tscn
+res://Materials/character_wall_slide.tres
+res://Materials/character_ground.tres
+res://Scenes/player.tscn

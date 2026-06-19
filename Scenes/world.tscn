@@ -1,15 +1,21 @@
 [gd_scene format=3 uid="uid://ciwg70u1ow4tg"]
 
 [ext_resource type="PackedScene" uid="uid://d2hdvpx3qt3sp" path="res://Scenes/player.tscn" id="1_a02cp"]
+[ext_resource type="Texture2D" uid="uid://ca3d18fpta8ky" path="res://Art and Assets/icon.svg" id="2_go701"]
+[ext_resource type="PackedScene" uid="uid://dkcvte8s250g2" path="res://Scenes/Phys Player.tscn" id="3_5a7ea"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_a02cp"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5a7ea"]
+friction = 0.2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_go701"]
-size = Vector2(1047, 99)
+size = Vector2(3381, 99)
 
 [node name="World" type="Node2D" unique_id=415335754]
 
 [node name="Player" parent="." unique_id=44240927 instance=ExtResource("1_a02cp")]
+process_mode = 4
+physics_interpolation_mode = 2
+visible = false
 position = Vector2(1, 0)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player" unique_id=1315953721]
@@ -19,8 +25,19 @@ remote_path = NodePath("../../Camera2D")
 position = Vector2(1, 0)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=73330750]
-physics_material_override = SubResource("PhysicsMaterial_a02cp")
+position = Vector2(47, 488)
+physics_material_override = SubResource("PhysicsMaterial_5a7ea")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1261204516]
-position = Vector2(10, 371)
+position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_go701")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1619289124]
+position = Vector2(4.0000715, 3)
+scale = Vector2(26.453127, 0.75000006)
+texture = ExtResource("2_go701")
+
+[node name="PhysPlayer" parent="." unique_id=830365102 instance=ExtResource("3_5a7ea")]
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="PhysPlayer" unique_id=866777330]
+remote_path = NodePath("../../Camera2D")

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dkcvte8s250g2"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://2apfv8yeswmx" path="res://Materials/character_ground.tres" id="1_de001"]
+[ext_resource type="Script" uid="uid://dqplcor4v4x8r" path="res://Scripts/phys_player.gd" id="1_fnhde"]
+[ext_resource type="Texture2D" uid="uid://ca3d18fpta8ky" path="res://Art and Assets/icon.svg" id="1_q2wqa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnhde"]
+size = Vector2(128, 126)
+
+[node name="PhysPlayer" type="RigidBody2D" unique_id=830365102]
+mass = 6.095
+physics_material_override = ExtResource("1_de001")
+lock_rotation = true
+contact_monitor = true
+max_contacts_reported = 10
+linear_damp_mode = 1
+script = ExtResource("1_fnhde")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1662918673]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_fnhde")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=634536357]
+texture = ExtResource("1_q2wqa")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=194865340]
+target_position = Vector2(0, 71)

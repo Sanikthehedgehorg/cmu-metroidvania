@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1781817138
+::res://::1781836774
 README.md::TextFile::-1::1781813915::0::1::::<><><>0<>0<><>::
 ::res://addons/::1781814864
 ::res://addons/dialogic/::1781814871
@@ -630,9 +630,15 @@ TimelineResourceLoader.gd::GDScript::1953327801557244659::1781814870::0::1::::Di
 TimelineResourceSaver.gd::GDScript::6005903703142383367::1781814870::0::1::::DialogicTimelineFormatSaver<>ResourceFormatSaver<><>0<>1<><>::
 ::res://Art and Assets/::1781814433
 icon.svg::CompressedTexture2D::4830874267821239616::1781814032::1781814433::1::::<><><>0<>0<>e5149b394a4b59f8d07e590427b152f4<>res://.godot/imported/icon.svg-2b762e98a192329d98e4a80dcc44a52e.ctex::
+::res://Materials/::0
+character_wall_slippery.tres::PhysicsMaterial::5341360508782894557::1781838119::0::1::::<><><>0<>0<><>::
+character_on_ground.tres::PhysicsMaterial::1896019617153323415::1781838253::0::1::::<><><>0<>0<><>::
+character_wall_slide.tres::PhysicsMaterial::517325484106163881::1781838304::0::1::::<><><>0<>0<><>::
 ::res://Music/::1781814420
-::res://Scenes/::1781814450
-Player.tscn::PackedScene::9069031950910004923::1781819004::0::1::::<><><>0<>0<><>::
-world.tscn::PackedScene::5380191219622102224::1781814444::0::1::::<><><>0<>0<><>::
-::res://Scripts/::1781814429
-player.gd::GDScript::6725185762336020059::1781819060::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://Scenes/::1781837585
+Phys Player.tscn::PackedScene::7866588491827108587::1781838053::0::1::::<><><>0<>0<><>::uid://dqplcor4v4x8r::::res://Scripts/phys_player.gd<>uid://ca3d18fpta8ky::::res://Art and Assets/icon.svg
+player.tscn::PackedScene::9069031950910004923::1781834036::0::1::::<><><>0<>0<><>::uid://c22y3d7gxlvwt::::res://Scripts/player.gd<>uid://ca3d18fpta8ky::::res://Art and Assets/icon.svg
+world.tscn::PackedScene::5380191219622102224::1781837364::0::1::::<><><>0<>0<><>::uid://d2hdvpx3qt3sp::::res://Scenes/player.tscn<>uid://ca3d18fpta8ky::::res://Art and Assets/icon.svg<>uid://dkcvte8s250g2::::res://Scenes/Phys Player.tscn
+::res://Scripts/::1781837787
+phys_player.gd::GDScript::8313921437042393831::1781837787::0::1::::<>RigidBody2D<><>0<>0<><>::
+player.gd::GDScript::6725185762336020059::1781831264::0::1::::<>CharacterBody2D<><>0<>0<><>::
