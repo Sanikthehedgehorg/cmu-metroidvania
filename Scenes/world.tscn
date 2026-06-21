@@ -8,7 +8,7 @@
 friction = 0.2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_go701"]
-size = Vector2(3381, 99)
+size = Vector2(6155, 96)
 
 [node name="World" type="Node2D" unique_id=415335754]
 
@@ -29,11 +29,10 @@ position = Vector2(47, 488)
 physics_material_override = SubResource("PhysicsMaterial_5a7ea")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1261204516]
-position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_go701")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1619289124]
-position = Vector2(4.0000715, 3)
+position = Vector2(-9.536743e-07, 2.3841858e-07)
 scale = Vector2(26.453127, 0.75000006)
 texture = ExtResource("2_go701")
 
